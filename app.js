@@ -1,5 +1,6 @@
 var express = require("express");
 var app = express();
+// process.env.PORT = 3000;
 
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({extended: true}));
@@ -12,7 +13,8 @@ app.use(flash());
 
 // DATABASE CONFIG
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/liment_nature_v1");
+// mongoose.connect("mongodb://localhost/liment_nature_v1");
+mongoose.connect("mongodb://Rusty:Dusty02@ds263520.mlab.com:63520/limentnature");
 
 // MODELS CONFIG
 var Campground = require("./models/campground");
