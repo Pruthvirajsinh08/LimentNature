@@ -1,0 +1,94 @@
+body{
+	background: black;
+}
+
+.navbar{
+	background: transparent;
+	border: none;
+}
+
+#link{
+	color: #808080;
+}
+
+#link:hover{
+	color: #F5F5F5;
+}
+
+h1{
+	color: white;
+	font-size: 64px;
+}
+
+h4{
+	color: white;
+}
+
+#landing-header{
+	font-family: georgia;
+	letter-spacing: 1px;
+	z-index: 1;
+	position: relative;
+	text-align: center;
+	padding-top: 40vh;
+	margin: 0px auto;
+	width: 40%;
+}
+
+.slideshow{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	top: 0;
+	left: 0;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.slideshow li{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	opacity: 0;
+	animation: imageAnimation 40s linear infinite;
+}
+
+.slideshow li:nth-child(1){
+	background-image: url("/images/Early Morning - Lakeside.jpg");
+}
+.slideshow li:nth-child(2){
+	background-image: url("/images/Night under the Sky.jpg");
+	animation-delay: 10s;
+}
+.slideshow li:nth-child(3){
+	background-image: url("/images/Early Morning - Riverside.jpg");
+	animation-delay: 20s;
+}
+.slideshow li:nth-child(4){
+	background-image: url("/images/On Snow - Cloud Mountain.jpg");
+	animation-delay: 30s;
+}
+
+@keyframes imageAnimation{
+	0%{
+		opacity: 0;
+		animation-timing-function: ease-in;
+	}
+	10%{
+		opacity: 1;
+		animation-timing-function: ease-out;
+	}
+	20%{
+		opacity: 1;
+	}
+	30%{
+		opacity: 0;
+	}
+}
