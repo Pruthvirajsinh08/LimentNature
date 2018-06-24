@@ -4,6 +4,7 @@ var middleware = require("../middleware");
 
 // MODELS CONFIG
 var Campground = require("../models/campground");
+var campgroundList = [];
 
 
 // RESTfull ROUTES
@@ -46,12 +47,22 @@ router.post("/", middleware.isLoggedIn, function(req, res){
 
 // SHOW ROUTE
 router.get("/:id", function(req, res){
+	campgroundList.pop();
+	Campground.find({}, function(err, allCampgrounds){
+		if(err){
+			console.log(err);
+		}
+		else{
+			campgroundList = allCampgrounds;
+		}
+	});
+	
 	Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground){
 		if(err){
 			console.log(err);
 		}
 		else{
-			res.render("campgrounds/show", {campground: foundCampground});
+			res.render("campgrounds/show", {campground: foundCampground, campgroundList: campgroundList});
 		}
 	});
 });

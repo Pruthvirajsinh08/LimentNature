@@ -49,3 +49,13 @@ footer{
 	width: 30%;
 	margin: 30px auto;
 }
+
+#link-a{
+	text-decoration: none;
+	color: white;
+}
+
+#link{
+	text-decoration: none;
+	color: black;
+}
