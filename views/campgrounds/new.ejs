@@ -13,6 +13,20 @@
 					<input class="form-control" type="text" name="campground[image]" placeholder="img-url">
 				</div>
 				<div class="form-group">
+					<div class="input-group text-center">
+						<label>Price:</label>
+						<input type="string" name="campground[price][currency]" placeholder="currency" style="width: 22%;">
+						<input type="string" name="campground[price][rate]" placeholder="rate" style="width: 22%;">
+						<label>per</label>
+						<label class="radio-inline">
+							<input type="radio" name="campground[price][time]" id="day" value="day">Day
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="campground[price][time]" id="night" value="night">Night
+						</label>
+					</div>
+				</div>
+				<div class="form-group">
 					<input class="form-control" type="text" name="campground[description]" placeholder="description">
 				</div>
 				<div class="form-group">

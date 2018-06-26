@@ -37,6 +37,10 @@ footer{
 	padding: 9px;
 }
 
+.thumbnail .caption-full a{
+	text-decoration: none;
+}
+
 #delete-form{
 	display: inline;
 }
